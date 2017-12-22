@@ -1,4 +1,7 @@
-﻿
+﻿var myApp = angular.module("myApp", []);
+    myApp.controller("CtrlOne", function ($scope) {
+      $scope.name = "lior mizrahi";
+});
 
 var msgArray = [];
 
