@@ -8,14 +8,14 @@ var msg1 = {
     frames : [
         {
             fromDate : '01/04/2017',
-            toDate : '18/06/2017',
+            toDate : '18/06/2018',
             arrOfDays : [0,2,5,6],
             fromTime : '15:23',
             toTime : '19:00'
         },
         {
             fromDate : '02/04/2017',
-            toDate : '25/12/2017',
+            toDate : '25/12/2018',
             arrOfDays : [0,2,3,6],
             fromTime : '14:23',
             toTime : '23:00'
@@ -33,14 +33,14 @@ var msg2 = {
     frames : [
         {
             fromDate : '01/04/2017',
-            toDate : '18/06/2017',
+            toDate : '18/06/2018',
             arrOfDays : [0,2,5,6],
             fromTime : '15:23',
             toTime : '19:00'
         },
         {
             fromDate : '02/04/2017',
-            toDate : '25/12/2017',
+            toDate : '25/12/2018',
             arrOfDays : [0,2,3,6],
             fromTime : '14:23',
             toTime : '23:00'
@@ -58,7 +58,7 @@ var msg3 = {
     frames : [
         {
             fromDate : '02/04/2017',
-            toDate : '25/12/2017',
+            toDate : '25/12/2018',
             arrOfDays : [1,2,3,6],
             fromTime : '14:23',
             toTime : '15:46'
@@ -92,7 +92,7 @@ exports.setupToDb = function(url,callback){
         var collection = database.collection('salem');
 
         // insert new msgs
-        insertMsgs(collection,msg1,msg2,msg3);
+        //insertMsgs(collection,msg1,msg2,msg3);
 
         callback(database);
     })
@@ -113,6 +113,8 @@ insertMsgs = function(collection,msg1,mgs2,mg3)
 exports.GetMsgs = function(database, res, callback)
 {
     var docs = [];
+
+    /*
     database.collection('salem').find({}).each(function(err, doc) {
 
         if (doc)
@@ -122,11 +124,9 @@ exports.GetMsgs = function(database, res, callback)
             console.log(docs);
             callback(res,docs);
         }
-    });
-}
+    });*/
 
-/*
-exports.GetMsgsWithCallback = function(database, callback)
-{
-    database.collection('salem').find({}).toArray(callback);
-}*/
+    database.collection('salem').find({}).toArray(function (err, items) {
+        callback(res, items);
+    })
+}

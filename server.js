@@ -92,7 +92,6 @@ server.listen(8080, null, null, function(){
 dbUtil.setupToDb(url,function(p_db)
 {
     database = p_db;
-    //dbUtil.GetMsgs(p_db);
 });
 
 app.get('/GetMsgs', dbUtil.GetMsgs);
