@@ -1,0 +1,24 @@
+{
+  "msgId" : 1 ,
+  "msgName" : "msg1",
+  "arrText" : [1,2,3,4,5,6,7,8,9,10],
+  "arrImages" : [1,2,3],
+  "templateSrc" : ".//templates//templateA.html",
+  "changeMsgTime" : 5,
+  "frames" : [
+    {
+      "fromDate" : "01/04/2017",
+      "toDate" : "18/06/2017",
+      "arrOfDays" : [0,2,5,6],
+      "fromTime" : "15:23",
+      "toTime" : "19:00"
+    },
+    {
+      "fromDate" : "02/04/2017",
+      "toDate" : "18/12/2017",
+      "arrOfDays" : [0,2,3,6],
+      "fromTime" : "14:23",
+      "toTime" : "23:00"
+    }
+  ]
+}
