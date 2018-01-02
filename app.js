@@ -11,13 +11,6 @@ var index = require('./routes/index');
 var users = require('./routes/users');
 var http = require('http');
 
-/*
-var fs = require('fs');
-var content = fs.readFileSync('./jsonFiles/data.json', 'utf8');
-console.log(content);
-
-*/
-
 
 
 // set the app
@@ -99,9 +92,6 @@ app.get('/getJsonData', function (req, response) {
 
 
 module.exports = app;
-
-
-//const request = require('request');
 
 app.get("/api", function(req, res)  {
   res.json([{'title' : 'lior'}]);

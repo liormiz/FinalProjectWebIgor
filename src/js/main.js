@@ -1,6 +1,6 @@
-﻿var myApp = angular.module("myApp", []);
+﻿var app = angular.module("myApp", []);
 
-myApp.controller("CtrlOne", function ($scope) {
+app.controller("CtrlOne", function ($scope) {
     $scope.name = "lior mizrahi";
 
     var msgArray = [];
@@ -89,3 +89,8 @@ myApp.controller("CtrlOne", function ($scope) {
 });
 
 
+app.service('CalcService', function (CalcService) {
+    this.square = function (a) {
+        return CalcService.multiply(a, a);
+    }
+});

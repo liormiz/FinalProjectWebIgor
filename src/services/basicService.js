@@ -1,7 +1,8 @@
 // JavaScript source code
 
-myApp.service('CalcService', function (MathService) {
+/*
+app.service('CalcService', function (CalcService) {
     this.square = function (a) {
-        return MathService.multiply(a, a);
+        return CalcService.multiply(a, a);
     }
-});
+});*/

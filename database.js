@@ -114,18 +114,6 @@ exports.GetMsgs = function(database, res, callback)
 {
     var docs = [];
 
-    /*
-    database.collection('salem').find({}).each(function(err, doc) {
-
-        if (doc)
-            docs.push(doc);
-        else
-        {
-            console.log(docs);
-            callback(res,docs);
-        }
-    });*/
-
     database.collection('salem').find({}).toArray(function (err, items) {
         callback(res, items);
     })
